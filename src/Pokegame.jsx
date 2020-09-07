@@ -12,7 +12,6 @@ function Pokegame() {
     { id: 94, name: "Gengar", type: "poison", base_experience: 225 },
     { id: 133, name: "Eevee", type: "normal", base_experience: 65 },
   ];
-
   const handOne = [];
   const handTwo = [...pokemons];
   while (handTwo.length > handOne.length) {
@@ -31,7 +30,26 @@ function Pokegame() {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>PokeGame App</h1>
-
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "1rem",
+        }}
+      >
+        <button
+          style={{
+            border: "none",
+            padding: "5px",
+            background: "#eee",
+            fontSize: "1.2rem",
+            textTransform: "uppercase",
+          }}
+          onClick={() => window.location.reload(true)}
+        >
+          New Game
+        </button>
+      </div>
       <Pokedex
         player={"Player One"}
         isWinner={expOne > expTwo}
